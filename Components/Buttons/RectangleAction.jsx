@@ -13,6 +13,7 @@ const RectangleAction = function (props) {
                 }]}>
                     <Text style={styles.textButtonFilled}>
                         {props['text']}
+                        {props['icon'] && props['icon']}
                     </Text>
                 </TouchableOpacity>
             )
@@ -21,6 +22,7 @@ const RectangleAction = function (props) {
                 <TouchableOpacity style={styles.buttonUnFilled}>
                     <Text style={styles.textButtonUnFilled}>
                         {props['text']}
+                        {props['icon'] && props['icon']}
                     </Text>
                 </TouchableOpacity>
             )
@@ -34,7 +36,6 @@ const styles = {
         display: 'flex',
         alignItems: 'center',
         borderRadius: 10,
-        // marginBottom: 20,
         elevation: 6,
         shadowColor: '#52006A',
     },

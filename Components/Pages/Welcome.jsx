@@ -1,7 +1,8 @@
 import { StyleSheet, View, Text, Image } from 'react-native'
 import welcomeImage from '../../assets/welcomeImage.png'
-import { BackgroundColor, AccentColor, SecondaryColor, PrimaryColor, PrimaryOpacityColor } from '../../Utils/Colors'
+import { BackgroundColor, AccentColor, SecondaryColor, PrimaryOpacityColor } from '../../Utils/Colors'
 import RectangleAction from '../Buttons/RectangleAction'
+import { Iconify } from 'react-native-iconify'
 
 const Welcome = () =>
     <View style={styles.container}>
@@ -26,12 +27,14 @@ const Welcome = () =>
         <RectangleAction props={{
             type: 'filled',
             text: 'LOGIN',
-            marginBotton: 20
+            marginBotton: 20,
+            icon: <Iconify icon="solar:login-broken" />
         }} />
 
         <RectangleAction props={{
             type: 'unfilled',
-            text: 'SIGNUP'
+            text: 'SIGNUP',
+            icon: <Iconify icon="carbon:new-tab" />
         }} />
     </View>
 
