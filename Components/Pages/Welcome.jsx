@@ -1,6 +1,7 @@
-import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, Text, Image } from 'react-native'
 import welcomeImage from '../../assets/welcomeImage.png'
 import { BackgroundColor, AccentColor, SecondaryColor, PrimaryColor, PrimaryOpacityColor } from '../../Utils/Colors'
+import RectangleAction from '../Buttons/RectangleAction'
 
 const Welcome = () =>
     <View style={styles.container}>
@@ -22,17 +23,16 @@ const Welcome = () =>
             source={welcomeImage}
             style={styles.welcomeImage} />
 
-        <TouchableOpacity style={styles.loginButton}>
-            <Text style={styles.textLoginButton}>
-                LOGIN
-            </Text>
-        </TouchableOpacity>
+        <RectangleAction props={{
+            type: 'filled',
+            text: 'LOGIN',
+            marginBotton: 20
+        }} />
 
-        <TouchableOpacity style={styles.signupButton}>
-            <Text style={styles.textsignupButton}>
-                SIGNUP
-            </Text>
-        </TouchableOpacity>
+        <RectangleAction props={{
+            type: 'unfilled',
+            text: 'SIGNUP'
+        }} />
     </View>
 
 
@@ -56,37 +56,6 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: SecondaryColor,
         textAlign: 'justify'
-    },
-    loginButton: {
-        backgroundColor: PrimaryColor,
-        width: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        borderRadius: 10,
-        marginBottom: 20,
-        elevation: 6,
-        shadowColor: '#52006A',
-    },
-    textLoginButton: {
-        color: '#fff',
-        fontSize: 24,
-        marginVertical: 22
-    },
-    signupButton: {
-        backgroundColor: '#fff',
-        width: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        borderRadius: 10,
-        borderWidth: 2,
-        borderColor: PrimaryColor,
-        elevation: 6,
-        shadowColor: '#52006A',
-    },
-    textsignupButton: {
-        color: '#000',
-        fontSize: 24,
-        marginVertical: 22
     },
     designUp: {
         borderRadius: 260 / 2,
