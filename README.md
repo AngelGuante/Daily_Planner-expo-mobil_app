@@ -20,3 +20,11 @@ https://dribbble.com/shots/5770976-To-Do-Task-list-App/attachments/1244890?mode=
 
   ![image](https://github.com/AngelGuante/daily_planner-expo-mobil_app/assets/49294128/c61d0e75-d7c7-41cc-9687-14fa8df5151c)
 
+* SignUp page
+
+  ![image](https://github.com/AngelGuante/daily_planner-expo-mobil_app/assets/49294128/2da1e216-1d29-4aff-874a-39a357c7504e)
+
+
+* Login page
+
+![image](https://github.com/AngelGuante/daily_planner-expo-mobil_app/assets/49294128/294371e9-8f68-4e47-aa44-4110224b226c)
