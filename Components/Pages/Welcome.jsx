@@ -4,40 +4,45 @@ import { BackgroundColor, AccentColor, SecondaryColor, PrimaryOpacityColor } fro
 import RectangleAction from '../Buttons/RectangleAction'
 import { Iconify } from 'react-native-iconify'
 
-const Welcome = () =>
-    <View style={styles.container}>
-        <View style={styles.designUp}>
+const Welcome = function (props) {
+    props = props['props']
+
+    return (
+        <View style={styles.container}>
+            <View style={styles.designUp}>
+            </View>
+            <View style={styles.designDown}>
+            </View>
+
+            <Text style={styles.grettingsTitle}>Hey there!</Text>
+
+            <Text style={styles.grettingsMessage}>
+                Here you can organize your daily tasks,
+                Never forget a task again! Create recurring tasks,
+                Track their progress Set medicament alert, and much more.
+                Lets Start!
+            </Text>
+
+            <Image
+                source={welcomeImage}
+                style={styles.welcomeImage} />
+
+            <RectangleAction props={{
+                type: 'filled',
+                text: 'LOGIN',
+                marginBotton: 20,
+                icon: <Iconify icon="solar:login-broken" />,
+                click: props['setActualPage'],
+            }} />
+
+            <RectangleAction props={{
+                type: 'unfilled',
+                text: 'SIGNUP',
+                icon: <Iconify icon="carbon:new-tab" />
+            }} />
         </View>
-        <View style={styles.designDown}>
-        </View>
-
-        <Text style={styles.grettingsTitle}>Hey there!</Text>
-
-        <Text style={styles.grettingsMessage}>
-            Here you can organize your daily tasks,
-            Never forget a task again! Create recurring tasks,
-            Track their progress Set medicament alert, and much more.
-            Lets Start!
-        </Text>
-
-        <Image
-            source={welcomeImage}
-            style={styles.welcomeImage} />
-
-        <RectangleAction props={{
-            type: 'filled',
-            text: 'LOGIN',
-            marginBotton: 20,
-            icon: <Iconify icon="solar:login-broken" />
-        }} />
-
-        <RectangleAction props={{
-            type: 'unfilled',
-            text: 'SIGNUP',
-            icon: <Iconify icon="carbon:new-tab" />
-        }} />
-    </View>
-
+    )
+}
 
 const styles = StyleSheet.create({
     container: {
