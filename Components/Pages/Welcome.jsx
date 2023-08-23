@@ -32,13 +32,20 @@ const Welcome = function (props) {
                 text: 'LOGIN',
                 marginBotton: 20,
                 icon: <Iconify icon="solar:login-broken" />,
-                click: props['setActualPage'],
+                click: {
+                    method: props['setActualPage'],
+                    params: 'login'
+                },
             }} />
 
             <RectangleAction props={{
                 type: 'unfilled',
                 text: 'SIGNUP',
-                icon: <Iconify icon="carbon:new-tab" />
+                icon: <Iconify icon="carbon:new-tab" />,
+                click: {
+                    method: props['setActualPage'],
+                    params: 'signup'
+                },
             }} />
         </View>
     )

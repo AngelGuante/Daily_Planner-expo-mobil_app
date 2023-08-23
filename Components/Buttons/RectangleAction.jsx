@@ -3,11 +3,11 @@ import { PrimaryColor } from '../../Utils/Colors'
 
 const RectangleAction = function (props) {
     props = props['props']
-console.log(props)
+    
     switch (props['type']) {
         case 'filled':
             return (
-                <TouchableOpacity onPress={() => (props['click'])('ss')}
+                <TouchableOpacity onPress={() => (props['click']['method'])(props['click']['params'])}
                     style={[styles.buttonFilled,
                     {
                         marginBottom: props['marginBotton'] ? props['marginBotton'] : 0
@@ -20,7 +20,8 @@ console.log(props)
             )
         case 'unfilled':
             return (
-                <TouchableOpacity style={styles.buttonUnFilled}>
+                <TouchableOpacity onPress={() => (props['click']['method'])(props['click']['params'])}
+                    style={styles.buttonUnFilled}>
                     <Text style={styles.textButtonUnFilled}>
                         {props['text']}
                         {props['icon'] && props['icon']}
